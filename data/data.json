@@ -1,0 +1,544 @@
+{
+
+  "company": {
+    "name": "Fillow",
+    "logo": "../logo.jpg",
+    "description": "Saas Admin Dashboard "
+  },
+
+  "user": {
+    "name": "Levi Siregar",
+    "email": "levisiregar@gmail.com",
+    "avatar": "../user/user.jpg",
+    "taskProgress": {
+      "completed": 20,
+      "total": 45
+    }
+  },
+  "navbar": {
+    "language": "EN",
+    "searchPlaceholder": "Search here...",
+    "notifications": {
+      "stars": 38,
+      "bell": 12,
+      "messages": 1,
+      "projects": 67
+    }
+  },
+  "sidebar": [
+    {
+      "label": "Dashboard",
+      "icon": "dashboard",
+      "route": "/dashboard"
+    },
+    {
+      "label": "Project",
+      "icon": "zap",
+      "badge": 67,
+      "route": "/projects"
+    },
+    {
+      "label": "Contacts",
+      "icon": "user",
+      "route": "/contacts"
+    },
+    {
+      "label": "Kanban",
+      "icon": "layout",
+      "route": "/kanban"
+    },
+    {
+      "label": "Analytics",
+      "icon": "bar-chart",
+      "badge": 12,
+      "route": "/analytics"
+    },
+    {
+      "label": "Calendar",
+      "icon": "calendar",
+      "route": "/calendar"
+    },
+    {
+      "label": "Messages",
+      "icon": "message-circle",
+      "route": "/messages"
+    }
+  ],
+    "footer": 
+        {
+        "title": "Fillow Sass Admin",
+        "year": " ©2025 All rights reserved.",
+        "tagline": "Made with ❤️ by Aditya Todmal"},
+
+  "projects": [
+    {
+      "id": "P-000441425",
+      "title": "Redesign Owlio Landing Page Website",
+      "createdDate": "2020-09-08",
+      "client": {
+        "name": "James Jr.",
+        "avatar": "https://randomuser.me/api/portraits/men/11.jpg"
+      },
+      "personInCharge": {
+        "name": "Marley Dokidis",
+        "avatar": "https://randomuser.me/api/portraits/women/44.jpg"
+      },
+      "deadline": "2020-09-29",
+      "status": "PENDING"
+    },
+    {
+      "id": "P-000441426",
+      "title": "Create UseCase Diagram of Fillow SaaS",
+      "createdDate": "2020-09-08",
+      "client": {
+        "name": "Jakob Vetrovs",
+        "avatar": "https://randomuser.me/api/portraits/men/12.jpg"
+      },
+      "personInCharge": {
+        "name": "Roger Schleifer",
+        "avatar": "https://randomuser.me/api/portraits/men/50.jpg"
+      },
+      "deadline": "2020-09-26",
+      "status": "ON PROGRESS"
+    },
+    {
+      "id": "P-000441427",
+      "title": "Reduce Website Page Size Omah",
+      "createdDate": "2020-09-08",
+      "client": {
+        "name": "Alena Culhane",
+        "avatar": "https://randomuser.me/api/portraits/women/60.jpg"
+      },
+      "personInCharge": {
+        "name": "Maren Levin",
+        "avatar": "https://randomuser.me/api/portraits/women/61.jpg"
+      },
+      "deadline": "2020-09-29",
+      "status": "CLOSED"
+    },
+    {
+      "id": "P-000441428",
+      "title": "Manage SEO for Eclan Company Profile",
+      "createdDate": "2020-09-08",
+      "client": {
+        "name": "Makenna Berg",
+        "avatar": "https://randomuser.me/api/portraits/women/77.jpg"
+      },
+      "personInCharge": {
+        "name": "Cheyenne Watt",
+        "avatar": "https://randomuser.me/api/portraits/women/78.jpg"
+      },
+      "deadline": "2020-09-29",
+      "status": "ON PROGRESS"
+    },
+    {
+      "id": "P-000441429",
+      "title": "Redesign Kripton Mobile App",
+      "createdDate": "2020-09-08",
+      "client": {
+        "name": "Marley Geidt",
+        "avatar": "https://randomuser.me/api/portraits/women/25.jpg"
+      },
+      "personInCharge": {
+        "name": "Davis Siphron",
+        "avatar": "https://randomuser.me/api/portraits/men/38.jpg"
+      },
+      "deadline": "2020-09-29",
+      "status": "PENDING"
+    },
+    {
+    "id": "P-000441429",
+    "title": "Redesign Kripton Mobile App",
+    "createdDate": "2020-09-08",
+    "client": {
+      "name": "Marley Geidt",
+      "avatar": "https://randomuser.me/api/portraits/women/25.jpg"
+    },
+    "personInCharge": {
+      "name": "Davis Siphron",
+      "avatar": "https://randomuser.me/api/portraits/men/38.jpg"
+    },
+    "deadline": "2020-09-29",
+    "status": "PENDING"
+  },
+  {
+    "id": "P-000441430",
+    "title": "Build Finance Dashboard",
+    "createdDate": "2020-10-12",
+    "client": {
+      "name": "Sarah Lin",
+      "avatar": "https://randomuser.me/api/portraits/women/15.jpg"
+    },
+    "personInCharge": {
+      "name": "John Kelvin",
+      "avatar": "https://randomuser.me/api/portraits/men/22.jpg"
+    },
+    "deadline": "2020-11-01",
+    "status": "ON PROGRESS"
+  },
+  {
+    "id": "P-000441431",
+    "title": "Marketing Site Rebranding",
+    "createdDate": "2020-08-22",
+    "client": {
+      "name": "Tina Scott",
+      "avatar": "https://randomuser.me/api/portraits/women/32.jpg"
+    },
+    "personInCharge": {
+      "name": "Mark Lester",
+      "avatar": "https://randomuser.me/api/portraits/men/45.jpg"
+    },
+    "deadline": "2020-10-15",
+    "status": "CLOSED"
+  },
+  {
+    "id": "P-000441432",
+    "title": "Create Landing Page for NeoBank",
+    "createdDate": "2020-09-30",
+    "client": {
+      "name": "Benita Holmes",
+      "avatar": "https://randomuser.me/api/portraits/women/28.jpg"
+    },
+    "personInCharge": {
+      "name": "Carlos Smith",
+      "avatar": "https://randomuser.me/api/portraits/men/19.jpg"
+    },
+    "deadline": "2020-10-20",
+    "status": "ON PROGRESS"
+  },
+  {
+    "id": "P-000441433",
+    "title": "UI Overhaul for Admin Dashboard",
+    "createdDate": "2020-07-14",
+    "client": {
+      "name": "George Bryant",
+      "avatar": "https://randomuser.me/api/portraits/men/10.jpg"
+    },
+    "personInCharge": {
+      "name": "Nina Marcus",
+      "avatar": "https://randomuser.me/api/portraits/women/46.jpg"
+    },
+    "deadline": "2020-08-30",
+    "status": "CLOSED"
+  },
+  {
+    "id": "P-000441434",
+    "title": "Refactor Authentication System",
+    "createdDate": "2020-10-05",
+    "client": {
+      "name": "Ethan Doyle",
+      "avatar": "https://randomuser.me/api/portraits/men/12.jpg"
+    },
+    "personInCharge": {
+      "name": "Lara Weston",
+      "avatar": "https://randomuser.me/api/portraits/women/18.jpg"
+    },
+    "deadline": "2020-10-28",
+    "status": "PENDING"
+  },
+  {
+    "id": "P-000441435",
+    "title": "SEO Optimization for E-Commerce",
+    "createdDate": "2020-09-10",
+    "client": {
+      "name": "Sophia Green",
+      "avatar": "https://randomuser.me/api/portraits/women/39.jpg"
+    },
+    "personInCharge": {
+      "name": "Martin Lee",
+      "avatar": "https://randomuser.me/api/portraits/men/33.jpg"
+    },
+    "deadline": "2020-09-30",
+    "status": "ON PROGRESS"
+  },
+  {
+    "id": "P-000441436",
+    "title": "Integrate Stripe Payment Gateway",
+    "createdDate": "2020-10-01",
+    "client": {
+      "name": "Oliver Black",
+      "avatar": "https://randomuser.me/api/portraits/men/48.jpg"
+    },
+    "personInCharge": {
+      "name": "Kate Monroe",
+      "avatar": "https://randomuser.me/api/portraits/women/20.jpg"
+    },
+    "deadline": "2020-10-18",
+    "status": "PENDING"
+  },
+  {
+    "id": "P-000441437",
+    "title": "Deploy AWS Cloud Architecture",
+    "createdDate": "2020-08-18",
+    "client": {
+      "name": "Harry J.",
+      "avatar": "https://randomuser.me/api/portraits/men/21.jpg"
+    },
+    "personInCharge": {
+      "name": "Lucy Bennett",
+      "avatar": "https://randomuser.me/api/portraits/women/42.jpg"
+    },
+    "deadline": "2020-09-25",
+    "status": "CLOSED"
+  },
+  {
+    "id": "P-000441438",
+    "title": "Build Custom Chatbot",
+    "createdDate": "2020-10-10",
+    "client": {
+      "name": "Amanda Lee",
+      "avatar": "https://randomuser.me/api/portraits/women/19.jpg"
+    },
+    "personInCharge": {
+      "name": "Simon Rex",
+      "avatar": "https://randomuser.me/api/portraits/men/50.jpg"
+    },
+    "deadline": "2020-11-05",
+    "status": "ON PROGRESS"
+  }
+  ],
+  "contacts": [
+    {
+      "id": "C-000123456",
+      "name": "John Doe",
+      "company": "Tech Solutions",
+      "ProfilePicture": ""
+    },
+    {
+      "id": "C-000123457",
+      "name": "Jane Smith",
+      "company": "Creative Agency",
+      "ProfilePicture": ""
+    },
+    {
+      "id": "C-000123458",
+      "name": "Alice Johnson",
+      "company": "Marketing Pros",
+      "ProfilePicture": ""
+    },
+    {
+      "id": "C-000123459",
+      "name": "Bob Brown",
+      "company": "Finance Corp",
+      "ProfilePicture": ""
+    },
+    {
+      "id": "C-000123460",
+      "name": "Charlie White",
+      "company": "Design Studio",
+      "ProfilePicture": ""
+    },
+    {
+      "id": "C-000123461",
+      "name": "Diana Green",
+      "company": "Consulting Group",
+      "ProfilePicture": ""
+    },
+    {
+      "id": "C-000123462",
+      "name": "Ethan Black",
+      "company": "Tech Innovations",
+      "ProfilePicture": ""
+    },
+    {
+      "id": "C-000123463",
+      "name": "Fiona Blue",
+      "company": "Digital Marketing",
+      "ProfilePicture": ""
+    },
+    {
+      "id": "C-000123464",
+      "name": "George Yellow",
+      "company": "E-commerce Solutions",
+      "ProfilePicture": ""
+    },
+    {
+      "id": "C-000123465",
+      "name": "Hannah Purple",
+      "company": "Web Development",
+      "ProfilePicture": ""
+    },
+    {
+      "id": "C-000123466",
+      "name": "Ian Orange",
+      "company": "Content Creation",
+      "ProfilePicture": ""
+    },
+    {
+      "id": "C-000123467",
+      "name": "Julia Pink",
+      "company": "Social Media Agency",
+      "ProfilePicture": ""
+    },
+    {
+      "id": "C-000123468",
+      "name": "Kevin Gray",
+      "company": "IT Services",
+      "ProfilePicture": ""
+    },
+    {
+      "id": "C-000123469",
+      "name": "Laura Silver",
+      "company": "Business Consulting",
+      "ProfilePicture": ""
+    }],
+
+    "banner": {
+    "title": "Manage your project in one touch",
+    "subtitle": "Let Fillow manage your project automatically with our best AI systems",
+    "image": "../chart.png",
+    "buttontext": "Try Free Now"
+    },
+    "emails": [
+    {
+      "id": "E-0001",
+      "subject": "How to improve project management flows",
+      "profilePic": "https://randomuser.me/api/portraits",
+      "sender": "ekxelshs ritcheds",
+      "date": "2023-10-01",
+      "snippet": "Hi team, just wanted to give you a quick update on the project status...",
+      "read": false,
+      "attachments": {
+        "file": "project_update.pdf",
+        "jpg": "image1.jpg"
+      }
+    },
+    {
+    "id": "E-0002",
+    "subject": "Design Review Meeting Notes",
+    "profilePic": "https://randomuser.me/api/portraits/women/45.jpg",
+    "sender": "Samantha Li",
+    "date": "2023-10-03",
+    "snippet": "Please find attached the notes from yesterday's design sync...",
+    "read": true,
+    "attachments": {
+      "file": "design_notes.docx",
+      "jpg": "design_sketch.jpg"
+    }
+  },
+  {
+    "id": "E-0003",
+    "subject": "Client Feedback - Sprint 7",
+    "profilePic": "https://randomuser.me/api/portraits/men/32.jpg",
+    "sender": "Marcus Rowe",
+    "date": "2023-10-05",
+    "snippet": "The client reviewed the latest build and shared a few suggestions...",
+    "read": false,
+    "attachments": {
+      "file": "client_feedback.pdf",
+      "jpg": "screenshot.png"
+    }
+  },
+  {
+    "id": "E-0004",
+    "subject": "Weekly Budget Report",
+    "profilePic": "https://randomuser.me/api/portraits/women/67.jpg",
+    "sender": "Alicia Jones",
+    "date": "2023-10-07",
+    "snippet": "Attached is the financial breakdown for this week’s report...",
+    "read": true,
+    "attachments": {
+      "file": "budget_report.xlsx",
+      "jpg": "pie_chart.jpg"
+    }
+  },
+  {
+    "id": "E-0005",
+    "subject": "Upcoming Team Outing",
+    "profilePic": "https://randomuser.me/api/portraits/men/12.jpg",
+    "sender": "David Clarke",
+    "date": "2023-10-09",
+    "snippet": "Hey everyone! Don’t forget to RSVP for our Friday offsite...",
+    "read": false,
+    "attachments": {
+      "file": "outing_schedule.pdf",
+      "jpg": "venue.jpg"
+    }
+  }
+    ],
+
+    "progressData": [
+    {
+      "title": "Fillow Company Profile Website Project",
+      "subtitle": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab autem, quae debitis voluptatum omnis, quaerat deserunt nam voluptates exercitationem facere sequi dolorem."
+    },
+    {
+      "title": "Fillow SaaS Admin Dashboard",
+      "subtitle": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab autem, quae debitis voluptatum omnis, quaerat deserunt nam voluptates exercitationem facere sequi dolorem."
+    },
+    {
+      "title": "Fillow Mobile App",
+      "subtitle": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab autem, quae debitis voluptatum omnis, quaerat deserunt nam voluptates exercitationem facere sequi dolorem."
+    }
+  ],
+  "onprogress":{
+    "progress": 75
+  },
+  "impProjects":[
+    {
+      "company": "Fillow",
+      "profile":"creative agency",
+      "profilePic":"https://randomuser.me/api/portraits",
+      "title": "Fillow Company Profile Website Project",
+      "tags": ["SEO", "Marketing"],
+      "taskDone": 12,
+      "dueDate": "2025-01-15"
+    },
+    {
+      "company": "Fillow",
+      "profile":"creative agency",
+      "profilePic":"https://randomuser.me/api/portraits",
+      "title": "Fillow SaaS Admin Dashboard",
+      "tags": ["UI/UX", "Development"],
+      "taskDone": 8,
+      "dueDate": "2025-02-20"
+    }
+  ],
+
+  "messages": [
+    {
+      "id": "M-0001",
+      "sender": "Maren Rosser",
+      "profilePic": "https://randomuser.me/api/portraits",
+      "message": "Hey team, just wanted to check in on the project status. Are we on track for the deadline?",
+      "online": false,
+      "date": "2023-10-01"
+    },
+    {
+      "id": "M-0002",
+      "sender": "Roger Schleifer",
+      "profilePic": "https://randomuser.me/api/portraits",
+      "message": "Hi Maren, yes we are on track. I've attached the updated",
+      "online": true,
+      "date": "2023-10-02" 
+    },
+    {
+      "id": "M-0003",
+      "sender": "Marley Dokidis",
+      "profilePic": "https://randomuser.me/api/portraits",
+      "message": "Great to hear! Let me know if you need any help with the design.",
+      "online": true,
+      "date": "2023-10-03"
+    },
+    {
+      "id": "M-0004",
+      "sender": "Alena Culhane",
+      "profilePic": "https://randomuser.me/api/portraits",
+      "message": "Thanks Marley, I will reach out if I need anything.",
+      "online": false,
+      "date": "2023-10-04"
+    },
+    {
+      "id": "M-0005",
+      "sender": "James Jr.",
+      "profilePic": "https://randomuser.me/api/portraits",
+      "message": "Hi team, just a reminder that our next meeting is scheduled for tomorrow at 10 AM.",
+      "online": true,
+      "date": "2023-10-05"
+    }
+  
+  ]
+    
+
+  
+}
