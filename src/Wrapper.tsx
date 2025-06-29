@@ -125,7 +125,7 @@ interface WrapperProps {
 }
 
 const Wrapper: React.FC<WrapperProps> = ({ company,user, sidebaritem, footerdata,projects,contacts,banner,emails,progressData,onprogress,impProjects,messages }) => {
-  const [activeLabel, setActiveLabel] = useState("Project");
+  const [activeLabel, setActiveLabel] = useState("Dashboard");
   return (
     <Box display="flex" >
       {/* Sidebar */}
