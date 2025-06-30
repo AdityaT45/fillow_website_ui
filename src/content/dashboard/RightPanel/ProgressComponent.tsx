@@ -26,8 +26,8 @@ const ProgressComponent: React.FC<ProgressComponentProps> = ({ progressData, onP
       sx={{
         flexDirection: {
           xs: 'column',
-          md:'row'
-          
+          md:'row',
+          boxShadow:"0 1px 4px rgba(0,0,0,0.08)"
         }
       }}
       alignItems="center"

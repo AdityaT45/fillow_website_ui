@@ -3,7 +3,7 @@ import { LineChart } from '@mui/x-charts/LineChart';
 
 const ProjectRate = () => {
   return (
-    <Box p={2} mt={2} bgcolor="#fff" borderRadius={2} boxShadow={2}>
+    <Box p={2} mt={2} bgcolor="#fff" borderRadius={2} sx={{boxShadow:"0 1px 4px rgba(0,0,0,0.08)",}}>
       <LineChart
         xAxis={[
           {

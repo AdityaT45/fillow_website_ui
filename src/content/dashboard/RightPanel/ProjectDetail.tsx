@@ -1,4 +1,4 @@
-import { Box, Chip, Divider, IconButton, Typography } from '@mui/material';
+import { Box, Chip, Divider, IconButton, LinearProgress, Typography } from '@mui/material';
 import React from 'react'
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
@@ -35,12 +35,33 @@ const ProjectDetail:React.FC<ProjectDetailProps> = ({project}) => {
             </Box>
             </Box>
             
-            <Typography variant='caption'>Due: {project.dueDate}</Typography>
+           
             <Box >{ project.tags.map((tag,index)=>(
                 <Chip key={index} label={tag} variant="outlined" color="primary" sx={{m:1}}/>
             ))}
             </Box>
-            <Typography variant="caption">{project.taskDone}</Typography><br/>
+
+            <LinearProgress
+                    variant="determinate"
+                    value={project.taskDone}
+                    sx={{
+                      height: 6,
+                      borderRadius: 5,
+                      my:1,
+                      backgroundColor: "#f0f0f0",
+                      "& .MuiLinearProgress-bar": {
+                        backgroundColor: "#886cc0",
+                      },
+                    }}
+                  />
+
+                  <Box display={"flex"} gap={1}>
+            
+              <Typography variant="caption">{project.taskDone} Task done</Typography><br/>
+                <Typography variant="caption" ml={"auto"}>Due Date {project.dueDate} Task done</Typography><br/>
+                    
+            </Box>
+           
             <Divider sx={{ my: 1 }} />
 
         </Box>

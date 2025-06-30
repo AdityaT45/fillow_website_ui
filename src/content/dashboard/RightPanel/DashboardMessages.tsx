@@ -19,10 +19,10 @@ const DashboardMessages: React.FC<DashboardMessagesProps> = ({ messages }) => {
   return (
     <Box
       p={2}
-      mt={1}
+      mt={2}
       bgcolor="#fff"
       borderRadius={2}
-      boxShadow={2}
+      sx={{boxShadow:"0 1px 4px rgba(0,0,0,0.08)",}}
       display="flex"
       flexDirection="column" // important: vertical stacking
       gap={2}
@@ -40,10 +40,10 @@ const DashboardMessages: React.FC<DashboardMessagesProps> = ({ messages }) => {
             textTransform: "none",
             backgroundColor: "#886cc0",
             color: "#fff",
-            padding: "2px 10px",
-            minHeight: "24px",
-            lineHeight: 1.2,
-            fontSize: "0.7rem",
+           
+      
+          
+            fontSize: "0.8rem",
             '&:hover': {
               backgroundColor: "#7754b5",
             },

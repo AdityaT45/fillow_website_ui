@@ -24,7 +24,7 @@ interface RecentEmailsProps {
 const RecentEmails:React.FC<RecentEmailsProps> = ({emails}) => {
   return (
     <>
-    <Box p={2} mt={2} bgcolor="#fff" borderRadius={2} boxShadow={2}>
+    <Box p={2} mt={2} bgcolor="#fff" borderRadius={2} sx={{boxShadow:"0 1px 4px rgba(0,0,0,0.08)",}}>
     <Typography  fontWeight={600} mb={1}>
       Recent Emails </Typography>
     {emails.map((email) => (

@@ -1,10 +1,15 @@
-import { Avatar, Box,  Typography } from '@mui/material';
-import React from 'react'
+import React from 'react';
+import {
+  Avatar,
+  Box,
+  Typography,
+  IconButton,
+  Badge,
+  useMediaQuery,
+  useTheme
+} from '@mui/material';
 import { styled } from '@mui/material/styles';
-import Badge from '@mui/material/Badge';
-
-
-
+import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 interface Message {
   id: string;
@@ -12,79 +17,75 @@ interface Message {
   profilePic: string;
   message: string;
   online: boolean;
-  date: string; 
+  date: string;
 }
 
 interface MessegeCardProps {
-    message: Message;
-
+  message: Message;
 }
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
     backgroundColor: '#44b700',
     color: '#44b700',
-    boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
-    '&::after': {
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      borderRadius: '50%',
-      
-      
-    },
-  },
-  '@keyframes ripple': {
-    '0%': {
-      transform: 'scale(.8)',
-      opacity: 1,
-    },
-    '100%': {
-      transform: 'scale(2.4)',
-      opacity: 0,
-    },
+    borderRadius: '50%',
+    width: 10,
+    height: 10,
+    border: `2px solid ${theme.palette.background.paper}`,
   },
 }));
 
+const MessegeCard: React.FC<MessegeCardProps> = ({ message }) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
+  // Trim to 5 words for mobile view
+  const getTrimmedMessage = (text: string, wordLimit: number) => {
+    const words = text.split(' ');
+    return words.length > wordLimit ? words.slice(0, wordLimit).join(' ') + '...' : text;
+  };
 
-const MessegeCard:React.FC<MessegeCardProps> = ({message}) => {
+  const displayMessage = isMobile ? getTrimmedMessage(message.message, 4) : message.message;
+
   return (
-    <>
-    <Box display="flex" alignItems="center" p={2}  borderBottom={"1px solid grey"}  mb={1}>
-
-        <StyledBadge
+    <Box display="flex" justifyContent="space-between" alignItems="center" py={1} px={2}>
+      <StyledBadge
+        variant="dot"
         overlap="circular"
         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-        variant="dot"
-
-         sx={{
-          '& .MuiBadge-dot': {
-            height: 10,
-            minWidth: 10,
-            borderRadius: '50%',
-            backgroundColor: message.online ? '#44b700' : '#9e9e9e', // green or grey
-          },
-        }}
+        invisible={!message.online}
       >
-        <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+        <Avatar src={message.profilePic} alt={message.sender} />
       </StyledBadge>
-        <Typography variant="body1" fontWeight={600} flex={1}>
-          {message.sender}      </Typography>
-          <Typography variant="body2" color="text.secondary" flex={2}></Typography>
-        <Typography variant="body2" color="text.secondary" flex={3}>
-          {message.message} </Typography>
-        <Typography variant="caption" color="text.secondary" ml={2}>
-          {message.date} </Typography>
 
-        
-        
+      <Box flex={1} ml={2}>
+        <Typography variant="subtitle2" fontWeight={600}>
+          {message.sender}
+        </Typography>
+        <Typography
+          variant="body2"
+          color="text.secondary"
+          sx={{
+            overflow: 'hidden',
+            whiteSpace: 'nowrap',
+            textOverflow: 'ellipsis',
+            maxWidth: '250px'
+          }}
+        >
+          {displayMessage}
+        </Typography>
+      </Box>
 
+      <Box textAlign="right">
+        <Typography variant="caption" color="text.secondary">
+          {message.date}
+        </Typography>
+        <IconButton size="small">
+          <MoreVertIcon fontSize="small" />
+        </IconButton>
+      </Box>
     </Box>
-    </>
-  )
-}
+  );
+};
 
-export default MessegeCard
+export default MessegeCard;

@@ -16,7 +16,7 @@ const ProjectStatistics = () => {
   }
   return (
     <>
-    <Box p={2} mt={2} bgcolor="#fff" borderRadius={2} boxShadow={2}>
+    <Box p={2} mt={2} bgcolor="#fff" borderRadius={2} sx={{boxShadow:"0 1px 4px rgba(0,0,0,0.08)",}}>
 
        <Box mb={2} display="flex" justifyContent="space-between" alignItems="center">
         <Typography variant="h6" >Project Statistics</Typography>
