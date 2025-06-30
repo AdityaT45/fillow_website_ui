@@ -15,7 +15,7 @@ interface FooterProps {
 const Footer:React.FC<FooterProps> = ({footerdata}) => {
   return (
     <>
-     <Box display="flex" flexDirection="column"  mt={4} p={2}>
+     <Box sx={{ display: { xs: "none", md: "flex"}}} flexDirection="column"  mt={4} p={2} >
     <Typography variant="caption" color="black" > {footerdata.title}</Typography>
     <Typography variant="caption" color="textSecondary" > {footerdata.year}</Typography>
     <Typography variant="caption" color="textSecondary" > {footerdata.tagline}</Typography>

@@ -36,7 +36,7 @@ const progressPercent =
               boxShadow: "0 0 0 2px #886cc0"
             }}
           />
-          <Box>
+          <Box >
            <Typography variant="h6" fontSize={16} fontWeight="bold" >
       {user.name}     </Typography>
     <Typography variant="subtitle1" fontSize={14} color="textSecondary">
@@ -45,7 +45,7 @@ const progressPercent =
           </Box>
  
      
-              <Box px={2}>
+              <Box px={2} sx={{ display: { xs: "none", md: "flex"}}}>
            
                 <Typography variant="body2" mb={1}> 
         Task Progress: {user.taskProgress.completed} / {user.taskProgress.total}

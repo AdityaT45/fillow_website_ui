@@ -43,10 +43,10 @@ interface RightDashboardPanelProps {
 const RightDashboardPanel:React.FC<RightDashboardPanelProps> = ({progressData,onProgress,impProjects,messages}) => {
   return (
     <>
-    <Box        
-        sx={{
+    <Box  p={2}            
+        sx={{  
           width: {
-            xs: "100%", 
+            xs: "95%", 
             sm: "100%", 
             md: "48%"  
           }        }}      >

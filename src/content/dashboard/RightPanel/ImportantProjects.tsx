@@ -18,7 +18,7 @@ interface ImportantProjectsProps {
 const ImportantProjects:React.FC<ImportantProjectsProps> = ({impProjects}) => {
   return (
     <>
-    <Box  p={2} mt={1} display="flex" width="50%" alignItems="center" bgcolor="#fff" borderRadius={2} boxShadow={2}>
+    <Box  p={2} mt={1} display="flex"  alignItems="center" bgcolor="#fff" borderRadius={2} boxShadow={2}>
     <Box display={"flex"} flexDirection="column" flex={1} >
     <Typography variant="h6" >      Important Projects </Typography>
     <Typography variant="caption" >      Lorem ipsum dolor sit amet </Typography>

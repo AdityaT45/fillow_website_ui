@@ -33,13 +33,14 @@ const CardSlider: React.FC<CardSliderProps> = ({ cards }) => {
         flexDirection: "column",
         alignItems: "center",
         gap: 1,
-        width:"50%"
+        width:{xs:"100%",
+          md:"100%"}
        
         
       }}
     >
       {/* Card */}
-      <Card sx={{ width: "90%",  textAlign: "center" }}>
+      <Card sx={{ width: "100%",  textAlign: "center" }}>
         <CardContent>
           <Typography variant="h6">{cards[index].title}</Typography>
           <Typography variant="caption" mt={2}>

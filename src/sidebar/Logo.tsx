@@ -22,7 +22,7 @@ const Logo:React.FC<LogoProps> = ({company}) => {
   alt={company.name}
   sx={{ height: "40px", width: "40px", borderRadius: "50%", marginRight: 1, objectFit: "cover" }}
 />
-        <Box>
+        <Box sx={{ display: { xs: "none", md: "flex"} ,flexDirection:"column" }}>
             <Typography variant="h5" sx={{fontWeight: "bold",color:"#4e3f68", marginBottom: "-3px"}}>
                 {company.name} </Typography>
             <Typography variant="caption" color="textSecondary">

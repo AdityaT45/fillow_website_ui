@@ -25,45 +25,45 @@
       "projects": 67
     }
   },
-  "sidebar": [
-    {
-      "label": "Dashboard",
-      "icon": "dashboard",
-      "route": "/dashboard"
-    },
-    {
-      "label": "Project",
-      "icon": "zap",
-      "badge": 67,
-      "route": "/projects"
-    },
-    {
-      "label": "Contacts",
-      "icon": "user",
-      "route": "/contacts"
-    },
-    {
-      "label": "Kanban",
-      "icon": "layout",
-      "route": "/kanban"
-    },
-    {
-      "label": "Analytics",
-      "icon": "bar-chart",
-      "badge": 12,
-      "route": "/analytics"
-    },
-    {
-      "label": "Calendar",
-      "icon": "calendar",
-      "route": "/calendar"
-    },
-    {
-      "label": "Messages",
-      "icon": "message-circle",
-      "route": "/messages"
-    }
-  ],
+ "sidebar": [
+  {
+    "label": "Dashboard",
+    "icon": "Dashboard",
+    "route": "/dashboard"
+  },
+  {
+    "label": "Project",
+    "icon": "FlashOn",
+    "badge": 67,
+    "route": "/projects"
+  },
+  {
+    "label": "Contacts",
+    "icon": "Person",
+    "route": "/contacts"
+  },
+  {
+    "label": "Kanban",
+    "icon": "ViewKanban",
+    "route": "/kanban"
+  },
+  {
+    "label": "Analytics",
+    "icon": "BarChart",
+    "badge": 12,
+    "route": "/analytics"
+  },
+  {
+    "label": "Calendar",
+    "icon": "CalendarToday",
+    "route": "/calendar"
+  },
+  {
+    "label": "Messages",
+    "icon": "ChatBubbleOutline",
+    "route": "/messages"
+  }
+],
     "footer": 
         {
         "title": "Fillow Sass Admin",
@@ -478,7 +478,7 @@
     {
       "company": "Fillow",
       "profile":"creative agency",
-      "profilePic":"https://randomuser.me/api/portraits",
+      "profilePic":"../com.jpg",
       "title": "Fillow Company Profile Website Project",
       "tags": ["SEO", "Marketing"],
       "taskDone": 12,
@@ -487,7 +487,7 @@
     {
       "company": "Fillow",
       "profile":"creative agency",
-      "profilePic":"https://randomuser.me/api/portraits",
+      "profilePic":"../comp2.jpg",
       "title": "Fillow SaaS Admin Dashboard",
       "tags": ["UI/UX", "Development"],
       "taskDone": 8,

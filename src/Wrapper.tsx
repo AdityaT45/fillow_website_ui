@@ -132,8 +132,9 @@ const Wrapper: React.FC<WrapperProps> = ({ company,user, sidebaritem, footerdata
       <Sidebar
         company={company}
         user={user}
-        sidebaritem={sidebaritem}
+        
         footerdata={footerdata}
+        sidebaritem={sidebaritem}
         onSelect={setActiveLabel}
         activeLabel={activeLabel}
       />
@@ -141,7 +142,7 @@ const Wrapper: React.FC<WrapperProps> = ({ company,user, sidebaritem, footerdata
       {/* Main Content Area */}
       <Box flexGrow={1} display="flex" flexDirection="column">
         {/* Topbar */}
-        <TopBar activeLabel={activeLabel} user={user}/>
+        <TopBar activeLabel={activeLabel} user={user} sidebaritem={sidebaritem} onSelect={setActiveLabel}/>
 
         {/* Content Wrapper */}
         <ContentWrapper activeLabel={activeLabel} projects={projects} contacts={contacts} banner={banner} emails={emails} progressData={progressData} onprogress={onprogress} impProjects={impProjects} messages={messages} />

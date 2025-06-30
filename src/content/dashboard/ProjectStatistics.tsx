@@ -36,6 +36,10 @@ const ProjectStatistics = () => {
     p: 0.8,
     border: "none",
     gap: 1,
+    display:{
+      xs:"none",
+      sm:"flex",
+    }
   }}
 >
   <ToggleButton

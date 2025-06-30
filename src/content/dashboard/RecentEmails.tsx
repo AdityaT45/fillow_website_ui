@@ -25,7 +25,7 @@ const RecentEmails:React.FC<RecentEmailsProps> = ({emails}) => {
   return (
     <>
     <Box p={2} mt={2} bgcolor="#fff" borderRadius={2} boxShadow={2}>
-    <Typography variant="h6" fontWeight={600} mb={1}>
+    <Typography  fontWeight={600} mb={1}>
       Recent Emails </Typography>
     {emails.map((email) => (
         <EmailCard key={email.id} email={email} />

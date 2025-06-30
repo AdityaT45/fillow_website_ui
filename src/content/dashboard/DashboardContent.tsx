@@ -74,7 +74,7 @@ const DashboardContent:React.FC<DashboardContentProps> = ({banner,emails,progres
           flexWrap="wrap"
           
           gap={1}
-          maxWidth="1200px" 
+          maxWidth="auto" 
           width="100%"
           
           mt={1}

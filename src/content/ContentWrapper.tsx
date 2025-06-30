@@ -118,7 +118,7 @@ const ContentWrapper: React.FC<ContentWrapperProps> = ({ activeLabel,projects,co
   };
   return (
     <>
-      <Box p={2} pt={0} flexGrow={1}  overflow="auto" bgcolor="#f9f9f9 " sx={{
+      <Box pt={0} flexGrow={1}  overflow="auto" bgcolor="#f9f9f9 " sx={{
     overflowY: 'auto', // or 'scroll' if needed
     scrollbarWidth: 'none', // Firefox
     '&::-webkit-scrollbar': {

@@ -34,8 +34,8 @@ interface LeftDashboardPanelProps {
 const LeftDashboardPanel:React.FC<LeftDashboardPanelProps> = ({banner,emails}) => {
   return (
     <>
-    <Box p={1}     
-        sx={{width: {xs: "100%", sm: "100%", md: "48%"  }}}>
+    <Box p={2}     
+        sx={{width: {xs: "95%", sm: "100%", md: "48%"  }}}>
 
             <DashboardBanner banner={banner} />
             <ProjectStatistics />

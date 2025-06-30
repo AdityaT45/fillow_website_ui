@@ -31,21 +31,46 @@ interface User {
   };
 }
 
+interface SidebarItem {
+  label: string;
+  icon: string;
+  route: string;
+  badge?: number;
+}
+
 interface TopBarProps {
   activeLabel: string;
   user: User;
+  onSelect: (label: string) => void;
+  sidebaritem: SidebarItem[];
 }
 
-const TopBar: React.FC<TopBarProps> = ({ activeLabel,user }) => {
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
+const TopBar: React.FC<TopBarProps> = ({ activeLabel, user, onSelect, sidebaritem }) => {
+  const [anchorElLang, setAnchorElLang] = React.useState<null | HTMLElement>(null);
+  const [anchorElMenu, setAnchorElMenu] = React.useState<null | HTMLElement>(null);
 
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget);
+  const openLang = Boolean(anchorElLang);
+  const openMenu = Boolean(anchorElMenu);
+
+  const handleLangClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorElLang(event.currentTarget);
   };
 
-  const handleClose = () => {
-    setAnchorEl(null);
+  const handleLangClose = () => {
+    setAnchorElLang(null);
+  };
+
+  const handleMenuClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorElMenu(event.currentTarget);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorElMenu(null);
+  };
+
+  const handleMenuSelect = (label: string) => {
+    onSelect(label);
+    handleMenuClose();
   };
 
   return (
@@ -59,9 +84,19 @@ const TopBar: React.FC<TopBarProps> = ({ activeLabel,user }) => {
         alignItems="center"
         justifyContent="center"
         sx={{ cursor: "pointer", overflow: "hidden" }}
+        onClick={handleMenuClick}
       >
         <MenuIcon sx={{ color: "black" }} />
       </Box>
+
+      {/* Dropdown for navigation */}
+      <Menu anchorEl={anchorElMenu} open={openMenu} onClose={handleMenuClose}>
+        {sidebaritem.map((item, i) => (
+          <MenuItem key={i} onClick={() => handleMenuSelect(item.label)}>
+            {item.label}
+          </MenuItem>
+        ))}
+      </Menu>
 
       {/* Page Title */}
       <Typography
@@ -76,101 +111,92 @@ const TopBar: React.FC<TopBarProps> = ({ activeLabel,user }) => {
       </Typography>
 
       {/* Search */}
-      
-
-      {/* Icons & Avatar */}
-      <Box display="flex" alignItems="center" gap={4} ml="auto">
-
-       
-        <FormControl variant="standard" sx={{ width: "100%" }}>
-          <Input
-            placeholder="Search here..."
-            disableUnderline
-            endAdornment={
-              <InputAdornment position="start">
-                <SearchIcon sx={{ color: "gray" }} />
-              </InputAdornment>
+      <FormControl variant="standard" sx={{ width: "100%" }}>
+        <Input
+          placeholder="Search here..."
+          disableUnderline
+          endAdornment={
+            <InputAdornment position="start">
+              <SearchIcon sx={{ color: "gray" }} />
+            </InputAdornment>
+          }
+          sx={{
+            borderRadius: "25px",
+            padding: "6px 12px",
+            width: "100%",
+            border: "1px solid #ccc",
+            fontSize: "12px",
+            "& input::placeholder": {
+              fontSize: "12px"
             }
+          }}
+        />
+      </FormControl>
+
+      {/* Badges */}
+      <Box display={{ xs: "none", sm: "flex" }} alignItems="center" gap={{ sm: 2, md: 4 }} ml="auto">
+        {[
+          { Icon: StarIcon, color: '#fca9d7' },
+          { Icon: NotificationsIcon, color: '#febe01' },
+          { Icon: MailIcon, color: '#f63154' },
+          { Icon: CalendarMonthIcon, color: '#08bc3c' },
+        ].map(({ Icon, color }, i) => (
+          <Badge
+            key={i}
+            badgeContent={38}
             sx={{
-              borderRadius: "25px",
-              padding: "6px 12px",
-              width: "100%",
-              border: "1px solid #ccc",
-              fontSize: "12px",
-              "& input::placeholder": {
-                fontSize: "12px"
-              }
-            }}
-          />
-        </FormControl>
-     
-        {/* Badges */}
-       <Box   display={{ xs: "none", sm: "flex" }} alignItems="center" gap={4}>
-  {[
-    { Icon: StarIcon, color: '#fca9d7' },
-    { Icon: NotificationsIcon, color: '#febe01' },
-    { Icon: MailIcon, color: '#f63154' },
-    { Icon: CalendarMonthIcon, color: '#08bc3c' },
-  ].map(({ Icon, color }, i) => (
-    <Badge
-      key={i}
-      badgeContent={38}
-      sx={{
-        '& .MuiBadge-badge': {
-          backgroundColor: color,
-          color: '#fff',
-        },
-      }}
-    >
-      <Icon color="action" />
-    </Badge>
-  ))}
-
-  <SettingsIcon color="action" />
-</Box>
-
-
-        {/* Avatar and Language Selector */}
-        <Box display="flex" alignItems="center" gap={1}>
-          <Avatar
-            alt="User"
-            src={user.avatar}
-            sx={{
-              width: 38,
-              height: 38,
-              borderRadius: "50%",
-              cursor: "pointer",
-              border: "2px solid #fff",
-              boxShadow: "0 0 0 2px #886cc0"
-            }}
-          />
-
-          <Button
-            endIcon={<KeyboardArrowDownIcon />}
-            onClick={handleClick}
-            sx={{
-              textTransform: "none",
-              color: "#fff",
-              display: "flex",
-              alignItems: "center",
-              borderRadius: "25px",
-              backgroundColor: "#886cc0",
-              fontSize: "0.75rem",
-              px: 2,
-              py: 0.5,
-              minHeight: "32px"
+              '& .MuiBadge-badge': {
+                backgroundColor: color,
+                color: '#fff',
+              },
             }}
           >
-            EN
-          </Button>
+            <Icon color="action" />
+          </Badge>
+        ))}
+        <SettingsIcon color="action" />
+      </Box>
 
-          <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
-            <MenuItem onClick={handleClose}>Hin</MenuItem>
-            <MenuItem onClick={handleClose}>Mar</MenuItem>
-            <MenuItem onClick={handleClose}>Fr</MenuItem>
-            <MenuItem onClick={handleClose}>Du</MenuItem>
-          </Menu>
-        </Box>
+      {/* Avatar and Language Selector */}
+      <Box display="flex" alignItems="center" gap={1}>
+        <Avatar
+          alt="User"
+          src={user.avatar}
+          sx={{
+            width: 38,
+            height: 38,
+            borderRadius: "50%",
+            cursor: "pointer",
+            border: "2px solid #fff",
+            boxShadow: "0 0 0 2px #886cc0"
+          }}
+        />
+
+        <Button
+          endIcon={<KeyboardArrowDownIcon />}
+          onClick={handleLangClick}
+          sx={{
+            textTransform: "none",
+            color: "#fff",
+            display: { xs: "none", md: "flex" },
+            alignItems: "center",
+            borderRadius: "25px",
+            backgroundColor: "#886cc0",
+            fontSize: "0.75rem",
+            px: 2,
+            py: 0.5,
+            minHeight: "32px"
+          }}
+        >
+          EN
+        </Button>
+
+        <Menu anchorEl={anchorElLang} open={openLang} onClose={handleLangClose}>
+          <MenuItem onClick={handleLangClose}>Hin</MenuItem>
+          <MenuItem onClick={handleLangClose}>Mar</MenuItem>
+          <MenuItem onClick={handleLangClose}>Fr</MenuItem>
+          <MenuItem onClick={handleLangClose}>Du</MenuItem>
+        </Menu>
       </Box>
     </Box>
   );
