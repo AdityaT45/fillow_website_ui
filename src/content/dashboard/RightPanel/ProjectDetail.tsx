@@ -37,7 +37,7 @@ const ProjectDetail:React.FC<ProjectDetailProps> = ({project}) => {
             
             <Typography variant='caption'>Due: {project.dueDate}</Typography>
             <Box >{ project.tags.map((tag,index)=>(
-                <Chip key={index} label={tag} variant="outlined" />
+                <Chip key={index} label={tag} variant="outlined" color="primary" sx={{m:1}}/>
             ))}
             </Box>
             <Typography variant="caption">{project.taskDone}</Typography><br/>
